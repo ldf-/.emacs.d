@@ -3,3 +3,6 @@ eshell/
 elpa/
 *.elc
 ido.last
+tramp
+bookmarks
+.org-id-locations
