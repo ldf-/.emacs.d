@@ -2,6 +2,27 @@
 
 ;;; Code:
 
+;; User org-mode for .org file
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
+;; Global org-mode keybindings
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+;; Remove linum mode on org-mode
+(defun nolinum ()
+  (interactive)
+  (message "Deactivated linum mode")
+  (global-linum-mode 0)
+  (linum-mode 0)
+)
+
+(global-set-key (kbd "<f6>") 'nolinum)
+
+(add-hook 'org-mode-hook 'nolinum)
+
 ;; bibtex support while exporting org to LaTeX
 ;; e.g. C-c C-e l o (main.org)
 ;;      %f = main.tex

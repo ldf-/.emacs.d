@@ -47,4 +47,17 @@
 ;; trailing spaces
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Add OS specific code
+(cond
+ ;; Mac OS X
+ ((eq system-type 'darwin)
+    (progn
+      (message "Loading darwin specific configurations")
+      (require 'macosx)))
+ ;; GNU/Linux
+ ((eq system-type 'gnu/linux)
+    (progn
+      (message "Loading gnu/linux specific configurations")))
+)
+
 (provide 'init) ; make (require 'init) happy

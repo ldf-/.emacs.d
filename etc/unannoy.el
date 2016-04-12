@@ -41,6 +41,9 @@
 (windmove-default-keybindings)
 ;; (setq org-replace-disputed-keys t) ;; org-mode fix
 
+;; auto-fill mode
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
 (provide 'unannoy)
 
 ;;; unannoy.el ends here
