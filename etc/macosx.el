@@ -16,4 +16,7 @@
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
 
+(setq exec-path (append '("/opt/local/bin")
+			exec-path))
+
 (provide 'macosx)

@@ -10,6 +10,8 @@
 ;; Load local "packages"
 (require 'unannoy)
 (require 'org-setup)
+(require 'gnus-setup)
+(require 'eshell-setup)
 
 ;; elpa
 (require 'package)
@@ -59,5 +61,13 @@
     (progn
       (message "Loading gnu/linux specific configurations")))
 )
+
+
+;; xcscope
+(require 'xcscope)
+(cscope-setup)
+
+;; exec-path-from-shell
+(exec-path-from-shell-initialize)
 
 (provide 'init) ; make (require 'init) happy
