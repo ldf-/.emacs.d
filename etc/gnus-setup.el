@@ -5,7 +5,7 @@
 (setq ;; email address
       user-mail-address "lorenzodavid@gmail.com"
       ;; gpg key ID
-      mml2015-signers '("0CEBFFB3")
+      mml2015-signers '("AD8A8ED1")
       ;; gmail on IMAP
       gnus-select-method
       '(nnimap "gmail"
